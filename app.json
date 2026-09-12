@@ -27,6 +27,14 @@
     "plugins": [
       "expo-router",
       [
+        "expo-navigation-bar",
+        {
+          "enforceContrast": true,
+          "hidden": false,
+          "style": "light"
+        }
+      ],
+      [
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
