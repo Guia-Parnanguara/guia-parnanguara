@@ -1,10 +1,12 @@
 import { NavigationBar } from "expo-navigation-bar";
 import { Text, View, StyleSheet } from "react-native";
 
+import { DestaqueCard } from "@/components/cards/destaqueCard";
+
 export default function Index(){
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Notice that the navigation bar has light buttons</Text>
+            <DestaqueCard />
             <NavigationBar style="light" />
         </View>
     )
@@ -13,11 +15,8 @@ export default function Index(){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#ffffffff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  text: {
-    color: '#fff',
   },
 });
