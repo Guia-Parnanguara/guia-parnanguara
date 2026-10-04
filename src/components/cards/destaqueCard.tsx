@@ -43,7 +43,7 @@ export function DestaqueCard({
   imageHeight = 128,
   testID,
 }: DestaqueCardProps) {
-  const displayTitle = title || name || 'Centro Histórico';
+  const displayTitle = title || name || 'Ponto Turístico Em Destaque';
 
   const displaySubtitle =
     subtitle ||
