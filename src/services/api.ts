@@ -17,10 +17,9 @@ export async function request<T>(
   const response = await fetch(url, options);
 
   if (!response.ok) {
-    const statusInfo = response.statusText ? ` ${response.statusText}` : '';
-    throw new Error(`HTTP error ${response.status}${statusInfo}`);
+    const statusText = response.statusText ? ` ${response.statusText}` : '';
+    throw new Error(`HTTP error ${response.status}${statusText}`);
   }
 
-  const text = await response.text();
-  return text ? (JSON.parse(text) as T) : ({} as T);
+  return (await response.json()) as T;
 }
